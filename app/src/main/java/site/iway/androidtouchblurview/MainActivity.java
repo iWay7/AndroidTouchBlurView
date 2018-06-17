@@ -24,7 +24,7 @@ public class MainActivity extends Activity {
                                        int oldLeft, int oldTop, int oldRight, int oldBottom) {
                 if (right - left > 0 && bottom - top > 0) {
                     Bitmap bitmap = AssetsHelper.readImageFile(MainActivity.this, "image.jpg");
-                    bitmap = BitmapHelper.scale(bitmap, Scale.CenterCrop, right - left, bottom - top);
+                    bitmap = BitmapHelper.scale(bitmap, Scale.CenterFit, right - left, bottom - top);
                     TouchBlurView touchBlurView = (TouchBlurView) v;
                     touchBlurView.setBitmap(bitmap, 50, 100);
                 }
